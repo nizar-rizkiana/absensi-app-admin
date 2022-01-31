@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Nunito;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #607080;
+            /* background-color: #f2f7ff; */
+            background: linear-gradient(90deg, #FFFFFF 0%, #FFEFBA 100%);
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .card-img-top {
+            max-height: 185px;
+        }
+
+        @media screen and (max-width: 900px) {
+            body {
+                background: linear-gradient(60deg, #FFFFFF 0%, #FFEFBA 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="m-0 my-auto">ABSENSI APP</h5>
+                        <div class="toggler">
+                            <a href="#" class='sidebar-hide d-xl-none d-block'><i class='bi bi-x bi-middle'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class='sidebar-title'>Menu</li>
+                        <li class="sidebar-item">
+                            <a href="dashboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item active">
+                            <a href="acara.html" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Acara</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="anggota.html" class='sidebar-link'>
+                                <i class="bi bi-collection-fill"></i>
+                                <span>Anggota</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class='mb-3 d-flex justify-content-between justify-content-lg-end'>
+                <a href="#" class='burger-btn d-inline d-xl-none'>
+                    <i class='bi bi-justify fs-3'></i>
+                </a>
+                <!-- foto profile -->
+                <!-- <div class="avatar avatar-lg">
+                    <img src="assets/images/faces/1.jpg">
+                </div> -->
+                <div class="dropdown">
+                    <div class="btn-group">
+                        <div class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="avatar avatar-lg">
+                                <img src="assets/images/faces/1.jpg"><span class="my-auto d-xl-block d-none">&nbsp; Hi,
+                                    Nizar
+                                    Rizkiana</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-heading">
+                <h3>Tambah data acara</h3>
+            </div>
+            <div class="page-content">
+                <div class="card mb-3 border">
+                    <h3 class="text-center mb-3">Form Tambah Acara</h3>
+                    <br>
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-4 text-center">
+                            <h5>Gambar pamplet acara</h5>
+                            <img src="assets/images/samples/building.jpg" alt="" width="300px">
+                            <br>
+                            <br>
+                            <input type="file" class="form-control">
+                            <br>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <form class="form">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="nama-acara">Nama Acara</label>
+                                                <input type="text" id="nama-acara" class="form-control"
+                                                    placeholder="Nama Acara" name="acara">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="lokasi">Lokasi</label>
+                                                <input type="text" id="lokasi" class="form-control"
+                                                    placeholder="Lokasi acara" name="lokasi">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="tanggal">Tanggal Acara</label>
+                                                <input type="date" id="tanggal" class="form-control"
+                                                    placeholder="Tanggal acara" name="tanggal">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="deskripsi">Deskripsi</label>
+                                                <textarea type="text" id="deskripsi" class="form-control"
+                                                    placeholder="Deskripsi acara" name="deskripsi"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                            <button type="reset"
+                                                class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                    <div class="col">
+                        <div class="card h-100 border">
+                            <img src="assets/images/samples/building.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <a href="detail-acara.html" class="card-title fw-bold mb-1">Kajian Minggu ke 3</a>
+                                <p class="text-danger mb-2">Lokasi : Labkom UNMA</p>
+                                <p class="text-muted mb-2">Tanggal : Minggu, 12 Januari 2022</p>
+                                <small>Status : <span class="badge bg-warning">Belum Mulai</span></small>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#" class="btn btn-success">Buka Acara Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border">
+                            <img src="assets/images/samples/building.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <a href="detail-acara.html" class="card-title fw-bold mb-1">Kajian Minggu ke 2</a>
+                                <p class="text-danger mb-2">Lokasi : Labkom UNMA</p>
+                                <p class="text-muted mb-2">Tanggal : Minggu, 12 Januari 2022</p>
+                                <small>Status : <span class="badge bg-success">Sedang Berlangsung</span></small>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#" class="btn btn-warning">Tutup Acara</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border">
+                            <img src="assets/images/samples/building.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <a href="detail-acara.html" class="card-title fw-bold mb-1">Kajian Minggu ke 1</a>
+                                <p class="text-danger mb-2">Lokasi : Labkom UNMA</p>
+                                <p class="text-muted mb-2">Tanggal : Minggu, 12 Januari 2022</p>
+                                <small>Status : <span class="badge bg-danger">Selesai</span></small>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="detail-acara.html" class="btn btn-primary">Lihat Data</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2022 &copy; Himasi UNMA</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Developed <span class='text-danger'><i class="bi bi-heart"></i></span> by <a
+                                href="mailto:nizar.rizkiana007@gmail.com">Nizar Rizkiana</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
